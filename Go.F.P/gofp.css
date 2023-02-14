@@ -1,0 +1,178 @@
+/*html, body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GoFP {
+    display: flex;
+    color: white;
+    font-size: 18vmin;
+    font-family: 'Rubik Glitch';
+    position: relative;
+    top: -30vh;
+} */
+
+html, body { background: black }
+html { height: 100%; display: flex; }
+/*body { margin: auto; } */
+
+
+.GoFP {
+    color:hsl(0, 0%, 80%);
+    font-family: sans-serif;
+    font-size: 10vmin;
+}
+
+.firstP {
+    position: relative;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+  }
+  
+  .firstP .text {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 1.0;
+  }
+  
+  .firstP .write .word {
+    color: hsl(0, 0%, 80%);
+    text-shadow: 0 0 0.1em currentColor;
+    transform-style: preserve-3d;
+    -webkit-animation: write linear both;
+            animation: write linear both;
+  }
+  
+  .firstP .laser {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* To avoid the blur getting masked by the clip-path we had to duplicate the element */
+    filter: blur(4px) contrast(10);
+    pointer-events: none;
+  }
+  
+  .firstP .laser .word {
+    display: inline-block;
+  }
+  
+  .firstP .laser .word {
+    color: hsl(0, 100%, 75%);
+    text-shadow: 0 0 0.1em currentColor;
+    transform: translateZ(5px);
+    -webkit-animation: laser linear both;
+            animation: laser linear both;
+  }
+  
+  .firstP .write .word,
+  .firstP .laser .word {
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms);
+            animation-delay: calc(0.3s + var(--word-index) * 160ms);
+
+  }
+  
+  .firstP:hover .word {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+  
+  
+/* 여기까지 Gosrock First Project */
+
+
+.frontP {
+  position: relative;
+  text-align: center;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+
+}
+
+.frontP .text {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 3vw;
+  /*font-size: calc(20vw / var(--word-total) )*/
+  line-height: 1.0;
+}
+
+.frontP .write .word {
+  color: hsl(0, 0%, 80%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform-style: preserve-3d;
+  -webkit-animation: write linear both;
+          animation: write linear both;
+
+
+}
+
+.frontP .laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* To avoid the blur getting masked by the clip-path we had to duplicate the element */
+  filter: blur(4px) contrast(10);
+  pointer-events: none;
+}
+
+.frontP .laser .word {
+  display: inline-block;
+}
+
+.frontP .laser .word {
+  color: hsl(0, 100%, 75%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform: translateZ(5px);
+  -webkit-animation: laser linear both;
+          animation: laser linear both;
+}
+
+.frontP .write .word,
+.frontP .laser .word {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms);
+          animation-delay: calc(0.3s + var(--word-index) * 160ms);
+ -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+.frontP:hover .word {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+/* .title .text .word,
+.title .text .word::before {
+  animation-play-state: paused;
+  animation-delay: -0.4s;
+} */
+
+@-webkit-keyframes write {
+  from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { -webkit-clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%); clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+}
+
+@keyframes write {
+  from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { -webkit-clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%); clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+}
+
+
+@-webkit-keyframes laser {
+    from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+    70%, to { -webkit-clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%); clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
+  }
+  
+@keyframes laser {
+    from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+    70%, to { -webkit-clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%); clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
+  }
+
