@@ -19,12 +19,15 @@
 html, body { background: black }
 html { 
   height: 100%; 
-  display: flex;
-  justify-content: center;
-
 }
 /*body { margin: auto; } */
 
+.title {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
 audio {
   opacity: 0;
 }
@@ -37,7 +40,6 @@ audio {
 
 .firstP {
     position: relative;
-    left: 3vmin;
     transform: translateZ(0);
     transform-style: preserve-3d;
   }
@@ -98,8 +100,6 @@ audio {
 /* 여기까지 Gosrock First Project */
 .frontP {
   position: relative;
-  right: 0.7vmin;
-  text-align: center;
   transform: translateZ(0);
   transform-style: preserve-3d;
 
@@ -188,9 +188,8 @@ audio {
   }
 
 
-  /*.words1 {
+  .words1 {
     position: relative;
-    left: 3vmin;
     transform: translateZ(0);
     transform-style: preserve-3d;
   }
@@ -236,16 +235,18 @@ audio {
   .words1 .laser .word {
     -webkit-animation-duration: 4s;
             animation-duration: 4s;
-    -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms);
-            animation-delay: calc(0.3s + var(--word-index) * 160ms);
+    -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms + 4s);
+            animation-delay: calc(0.3s + var(--word-index) * 160ms + 4s);
 
   }
+
+  .
   
   .words1:hover .word {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
   } 
-  */
+  
 
 
 
