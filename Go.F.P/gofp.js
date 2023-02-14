@@ -1,3 +1,3 @@
 Splitting();
 
-// Hover over the title to pause the CSS animation 
+// Hover over the title to pause the CSS animation  
