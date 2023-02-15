@@ -1,6 +1,7 @@
 body {
 	--color-text: #4a525e;
-	--color-bg: #121a27;
+	/* --color-bg: #121a27; */
+	--color-bg: #e34f4f;
 	--color-link: #b2366f;
 	--color-link-hover: #fff;
 	--color-gallery-title: #4a525e;

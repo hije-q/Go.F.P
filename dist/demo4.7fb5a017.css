@@ -1,15 +1,18 @@
 body {
 	--color-text: #4a525e;
-	--color-bg: #121a27;
-	--color-link: #b2366f;
+	/* --color-bg: #121a27; */
+	--color-bg: #000000;
+	/* --color-link: #b2366f; */
+	--color-link: #85b236;
 	--color-link-hover: #fff;
 	--color-gallery-title: #4a525e;
-	--color-gallery-number: #54d7e4;
+	--color-gallery-number: #85b236;
 	--color-gallery-link: #fff;
-	--color-gallery-link-bg: #e95499;
+	--color-gallery-link-bg: #a61d1dfb;
 	--color-gallery-link-hover: #e95499;
 	--color-gallery-link-bg-hover: #fff;
-	--color-gallery-text: #e95499;
+	/* --color-gallery-text: #e95499; */
+	--color-gallery-text: #ff0000;
 	--cursor-stroke: none;
 	--cursor-fill: #79e2e6;
 	--cursor-stroke-width: 1px;
