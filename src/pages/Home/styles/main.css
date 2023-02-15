@@ -1,0 +1,174 @@
+@font-face {
+  /*빛나는별*/
+  font-family: "Cafe24Shiningstar";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Roboto, Arial;
+  margin: 0;
+  background-color: #000000;
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main-background-img {
+  width: 100%;
+}
+
+.main-logo {
+  position: absolute;
+  align-self: center;
+}
+
+.main-logo-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .main-logo-img {
+    width: 10rem;
+  }
+}
+
+.main-content {
+  padding-top: 8rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.left-section {
+}
+
+.gosrock {
+  width: 20rem;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.goto {
+  align-self: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.insta-link,
+.youtube-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.insta-link:hover,
+.youtube-link:hover {
+  opacity: 0.5;
+  transition-delay: 0.2s;
+}
+
+.description {
+}
+
+.insta,
+.youtube {
+  width: 1.5rem;
+  margin-right: 0.7rem;
+}
+
+/*media quaries*/
+@media screen and (max-width: 767px) {
+  .main-content {
+    padding-top: 5rem;
+    flex-direction: column;
+  }
+  .left-section {
+    display: flex;
+    justify-content: center;
+  }
+  .gosrock {
+    width: 10rem;
+    padding-bottom: 1.5rem;
+  }
+  .right-section {
+    margin-top: 3rem;
+    align-items: center;
+  }
+  .goto {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+  .insta,
+  .youtube {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.intro {
+  font-family: "GmarketSansMedium";
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.abt-GSR {
+  font-family: "Cafe24Shiningstar";
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.posters {
+  align-self: center;
+  margin-top: 2rem;
+}
+.poster {
+  width: 40rem;
+}
+
+@media screen and (max-width: 767px) {
+  .intro {
+    font-size: 1rem;
+  }
+  .abt-GSR {
+    font-size: 2rem;
+  }
+  .poster {
+    width: 20rem;
+  }
+}
