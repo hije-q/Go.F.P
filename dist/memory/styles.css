@@ -12,7 +12,7 @@ body {
   /* background-image: url('배경/블랙보드.jpg') ; */
   background-color: #ffffff;
   /* background-repeat : no-repeat;*/
-  background-size: cotain;
+  background-size: contain;
   /* backdrop-filter: brightness(85%); */
 }
 
