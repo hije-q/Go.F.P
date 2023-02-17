@@ -212,7 +212,7 @@ IE6-9 */
     /*display: none;
     p태그 일단 숨기기*/
     color: white;
-    font-size: 13px;
+    font-size: 17px;
     min-width: 140px;
     max-height: 0;
     /*p태그 처음에 좀 안보였으면 좋겠다*/
@@ -229,7 +229,7 @@ IE6-9 */
 .team-item:hover .profile-contents p {
     opacity: 1;
     /*나중엔 투명도 1*/
-    max-height: 6em;
+    max-height: 30em;
     /*호버 됐을때 p태그 올라올 공간 충분히 많이 준다*/
     margin-top: 0.2rem;
     /*소제목이랑 p태그 조금 띄우기*/
