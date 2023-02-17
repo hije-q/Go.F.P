@@ -26,7 +26,7 @@ body {
   --cursor-fill: #c5681c;
   --cursor-stroke-width: 1px;
   font-family: halyard-display, sans-serif;
-  font-weight: 300;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

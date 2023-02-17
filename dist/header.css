@@ -19,7 +19,11 @@
   align-items: center;
   z-index: 9999;
   font-family: "Cafe24Simplehae";
-  font-weight: 100 !important;
+  font-size: 10px;
+}
+
+.logo-links {
+  display: flex;
 }
 
 .logo {
@@ -31,6 +35,25 @@
 
 .logo-image {
   width: 10vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  margin-left: 2vw;
+}
+
+.insta,
+.youtube {
+  display: flex;
+  align-items: center;
+}
+.insta-logo,
+.youtube-logo {
+  width: 1vw;
+  margin-right: 10px;
 }
 
 .menu {
