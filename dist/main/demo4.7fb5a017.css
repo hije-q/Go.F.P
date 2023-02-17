@@ -83,7 +83,7 @@ body {
 .gallery__item-title,
 .gallery__text {
   font-family: moret, serif;
-  font-weight: 800;
+  font-weight: 100;
   font-style: italic;
   align-self: center;
 }
@@ -127,12 +127,12 @@ body {
   font-size: 20vw;
   line-height: 0.8;
   margin: 0 10vw 0 14vw;
-  text-transform: lowercase;
   color: transparent;
-  -webkit-text-stroke: 1px var(--color-gallery-text);
-  text-stroke: 1px var(--color-gallery-text);
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  -webkit-text-stroke: 3px var(--color-gallery-text);
+  text-stroke: 3px var(--color-gallery-text);
+  -webkit-text-fill-color: #000000;
+  text-fill-color: #000000;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
 }
 
 .gallery__text-inner {
