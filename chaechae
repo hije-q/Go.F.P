@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>다음 지도 API</title>
+    <link rel="stylesheet" href="css/StyleSheet.css">
+</head>
+<body>
+	<div id="map" style="width:100%;height:100vh;"></div>
+
+	<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bba78b591ccaeafec46beae346d55452&libraries=clusterer"></script>
+	<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = {
+		        center: new kakao.maps.LatLng(37.55036, 126.92447), // 지도의 중심좌표
+		        level: 4, // 지도의 확대 레벨
+		        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+		    }; 
+
+		// 지도를 생성한다 
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 커스텀 오버레이를 지도에 표시합니다
+customOverlay.setMap(map);
+
+    var 데이터 = [
+      [37.549283171692764, 126.92266936051568, '<div style="padding: 5px">칸다소바</div>'],
+      [37.547381746439704, 126.92218473191838, '<div style="padding: 5px">금복식당</div>'],
+      [37.547962361705714, 126.92138634561454, '<div style="padding: 5px">상수치치</div>'],
+      [37.54928022902589, 126.92162260121076, '<div style="padding: 5px">제순식당</div>'],
+      [37.54858962885207, 126.91963448055547, '<div style="padding: 5px">더보이즈피자</div>'],
+      [37.54798113520158,126.92252642401589, '<div style="padding: 5px">명장</div>'],
+      [37.54858195630472, 126.92509460118889, '<div style="padding: 5px">플레이트946</div>'],
+      [37.549647878997256, 126.92237475819786, '<div style="padding: 5px">윤씨밀방</div>'],
+      [37.547321259846264, 126.92268836144713, '<div style="padding: 5px">오츠커피</div>'],
+      [37.5484353985516, 126.92486559331537, '<div style="padding: 5px">소담카츠</div>']
+    ];   
+
+    for (var i=0; i < 데이터.length; i++){
+      // 지도에 마커를 생성하고 표시한다
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(데이터[i][0], 데이터[i][1]), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		});
+
+    // 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        content : 데이터[i][2]
+    });
+  
+    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    }
+
+		// 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+	</script>
+</body>
+</html>
