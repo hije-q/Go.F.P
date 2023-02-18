@@ -64,8 +64,8 @@ audio {
     color:hsl(0, 0%, 80%);
     font-family: 'Playfair Display';
     font-size: 12vmin;
-    animation: fadein1 1s;
-    -webkit-animation: fadein1 1s;
+    animation: fadein1 2s;
+    -webkit-animation: fadein1 2s;
 }
 
 @keyframes fadein1 {
@@ -98,6 +98,7 @@ audio {
     top: 8vh;
     transform: translateZ(0);
     transform-style: preserve-3d;
+    float: right;
   }
 
   .words2{
@@ -106,6 +107,7 @@ audio {
     top: 11vh;
     transform: translateZ(0);
     transform-style: preserve-3d;
+    float:
   }
 
   
@@ -246,7 +248,23 @@ audio {
                 0 1px 3px white;
   overflow: hidden;
   color: #191919;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+  padding-top: 0.5vh;
+  
+  animation: fadeinCard 28s;
+  -webkit-animation: fadeinCard 28s;
 }
+
+@keyframes fadeinCard {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
 
 
 button {
@@ -290,7 +308,6 @@ button {
 
 .card {
   display: relative;
-  left: 2vw;
   background-color: #f4f1eb;
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
   height: 20vmin;
@@ -302,8 +319,10 @@ button {
   transition: transform .4s ease,
               box-shadow .4s ease;
   z-index: 10;
-  top: 2vh;
+  top: 1.3vh;
 }
+
+
 
 
 .card:hover {
