@@ -5,26 +5,34 @@
     <script src="gofp.js"></script>
     <title>Go.F.P</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Anton&family=Black+Ops+One&family=Creepster&family=Homemade+Apple&family=Mr+Dafoe&family=Noto+Nastaliq+Urdu&family=Noto+Sans+KR:wght@100&family=Noto+Serif+Tamil:wght@700&family=Oswald:wght@300&family=Playfair+Display:ital,wght@1,500&family=Roboto+Condensed:wght@300&family=Rubik+Glitch&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Anton&family=Black+Ops+One&family=Creepster&family=Homemade+Apple&family=Mr+Dafoe&family=Noto+Nastaliq+Urdu&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR&family=Noto+Serif+Tamil:wght@700&family=Oswald:wght@300&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@300&family=Rubik+Glitch&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
     </header>
+
+    <div class="menu">
+      <span>1번</span><span>2번</span><span>picture</span>
+    </div>
 
     <div class="title">
 
     <div class="GoFP" >
         Go.F.P
     </div> 
+
+    <!--<div class="content">1</div>
+    <div class="content">2</div> -->
 
     <div class="firstP">
         <span class="text write" data-splitting="lines">
@@ -62,16 +70,108 @@
         </span>
       </div>
 
-      <section style="--n-rows: 3; --n-cols: 6">
-        <style>.hex-cell:nth-of-type(5n + 1) { grid-column-start: 2 }</style>
-        <div class="hex-cell"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=650&amp;fm=jpg"/></div>
-        <div class="hex-cell"><img src="https://images.unsplash.com/photo-1497733942558-e74c87ef89db?w=650&amp;fm=jpg"/></div>
-        <div class="hex-cell"><img src="https://images.unsplash.com/photo-1540744276164-9dc898353c7b?w=650&amp;fm=jpg"/></div>
-        <div class="hex-cell"><img src="https://images.unsplash.com/photo-1469975692758-66d107a536cb?w=650&amp;fm=jpg"/></div>
-        <div class="hex-cell"><img src="https://images.unsplash.com/photo-1490845060161-85f9ce08a9f4?w=650&amp;fm=jpg"/></div>
-      </section>
-      <!-- partial -->
+      </div>
+
+      <div class="namecard" >
+        <button class="card" id="card1" id="card1">
+          <div class="row clearfix">
+            <div class="left big">Gosrock</div>
+            <div class="right"><p><span class="big">C</span>omputer <span class="big">E</span>ngineering</p><p><span class="med no-space">G</span><span class="small no-space">osrock 22 </span><span class="med no-space">V</span><span class="small no-space">ocal</span></p></div>
+          </div>
+          <div class="row">
+            <p><span class="big">Han </span><span class="big">Jiye</span></p>
+            <p><span class="big">T</span>eam <span class="big">L</span>eader</p>
+          </div>
+
+          <!--<div class="row">
+            <p><span class="med">358 E</span><span class="small">xchange </span><span class="med">P</span><span class="small">lace </span><span class="med">N</span><span class="small">ew </span><span class="med">Y</span><span class="small">ork</span><span class="med">, N. Y. 10099 F</span><span class="small">ax </span><span class="med">212 555 6390 T</span><span class="small">elex </span><span class="med">10 4534</span>
+            </p>
+          </div>-->
+          
+
+        </button>
+
+        <!--2-->
+          <button class="card" id="card2">
+            <div class="row clearfix">
+              <div class="left big">Main Page</div>
+              <div class="right"><p><span class="big">P</span>ierce &amp; <span class="big">P</span>ierce</p><p><span class="med no-space">M</span><span class="small no-space">ergers and </span><span class="med no-space">A</span><span class="small no-space">cquisitions</span></p></div>
+            </div>
+            <div class="row">
+              <p><span class="big">P</span>atrick <span class="big">Bateman</span></p>
+              <p><span class="big">V</span>ice <span class="big">P</span>resident</p>
+            </div>
+          </button>
+
+          <!--3-->
+            <button class="card" id="card3">
+              <div class="row clearfix">
+                <div class="left big">212 555 6342</div>
+                <div class="right"><p><span class="big">P</span>ierce &amp; <span class="big">P</span>ierce</p><p><span class="med no-space">M</span><span class="small no-space">ergers and </span><span class="med no-space">A</span><span class="small no-space">cquisitions</span></p></div>
+              </div>
+              <div class="row">
+                <p><span class="big">P</span>atrick <span class="big">Bateman</span></p>
+                <p><span class="big">V</span>ice <span class="big">P</span>resident</p>
+              </div>
+            </button>
+              
+            <button class="none"></button>
+          <!--4-->
+            <button class="card" id="card4">
+              <div class="row clearfix">
+                <div class="left big">212 555 6342</div>
+                <div class="right"><p><span class="big">P</span>ierce &amp; <span class="big">P</span>ierce</p><p><span class="med no-space">M</span><span class="small no-space">ergers and </span><span class="med no-space">A</span><span class="small no-space">cquisitions</span></p></div>
+              </div>
+              <div class="row">
+                <p><span class="big">P</span>atrick <span class="big">Bateman</span></p>
+                <p><span class="big">V</span>ice <span class="big">P</span>resident</p>
+              </div>
+            </button>
+
+            <!--5-->
+              <button class="card" id="card5">
+                <div class="row clearfix">
+                  <div class="left big">212 555 6342</div>
+                  <div class="right"><p><span class="big">P</span>ierce &amp; <span class="big">P</span>ierce</p><p><span class="med no-space">M</span><span class="small no-space">ergers and </span><span class="med no-space">A</span><span class="small no-space">cquisitions</span></p></div>
+                </div>
+                <div class="row">
+                  <p><span class="big">P</span>atrick <span class="big">Bateman</span></p>
+                  <p><span class="big">V</span>ice <span class="big">P</span>resident</p>
+                </div>
+              </button>
+
+              <!--6-->
+                <button class="card" id="card6">
+                  <div class="row clearfix">
+                    <div class="left big">212 555 6342</div>
+                    <div class="right"><p><span class="big">P</span>ierce &amp; <span class="big">P</span>ierce</p><p><span class="med no-space">M</span><span class="small no-space">ergers and </span><span class="med no-space">A</span><span class="small no-space">cquisitions</span></p></div>
+                  </div>
+                  <div class="row">
+                    <p><span class="big">P</span>atrick <span class="big">Bateman</span></p>
+                    <p><span class="big">V</span>ice <span class="big">P</span>resident</p>
+                  </div>
+                </button>
+              
+                <!--7-->
+                  <button class="card" id="card7">
+                    <div class="row clearfix">
+                      <div class="left big">212 555 6342</div>
+                      <div class="right"><p><span class="big">P</span>ierce &amp; <span class="big">P</span>ierce</p><p><span class="med no-space">M</span><span class="small no-space">ergers and </span><span class="med no-space">A</span><span class="small no-space">cquisitions</span></p></div>
+                    </div>
+                    <div class="row">
+                      <p><span class="big">P</span>atrick <span class="big">Bateman</span></p>
+                      <p><span class="big">V</span>ice <span class="big">P</span>resident</p>
+                    </div>
+                  </button>
+      </div>
+
+    
       
+      
+  
+
+    <script src="ClickToMove.js"></script>
+    
       <!-- partial -->
       <script src='https://unpkg.com/splitting/dist/splitting.js'></script>
       <script  src="./gofp.js"></script>
@@ -80,9 +180,9 @@
 
 
       
-<audio autoplay controls>
+<!--<audio autoplay controls>
   <source src="calm.mp3" type="audio/mp3">
-</audio>
+</audio> -->
     
 <!-- partial:index.partial.html -->
 <!-- Quantity should be the same in Sass-->
@@ -117,3 +217,4 @@
 
 </body>
 </html>
+
