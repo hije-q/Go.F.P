@@ -1,123 +1,225 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <meta charset="utf-8">
-   <title>고스락 맛집 지도</title>
-   <link rel="stylesheet" type="text/css" href="/dist/header.css" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>고스락 맛집 지도</title>
+    <link rel="stylesheet" type="text/css" href="/dist/header.css" />
+  </head>
+  <body>
     <header>
-        <div class="gosrock-header">
-          <div class="logo-links">
-            <a class="logo" href="/dist/main/main.html"
+      <div class="gosrock-header">
+        <div class="logo-links">
+          <a class="logo" href="/dist/main/main.html"
+            ><img class="logo-image" src="https://i.ibb.co/LQ8xv6d/image.png"
+          /></a>
+          <div class="links">
+            <a
+              class="insta"
+              onclick="window.open('https://www.instagram.com/gosrock_official/')"
               ><img
-                class="logo-image"
-                src="/dist/고스락-영어로고-벡터.png"
-            /></a>
-            <div class="links">
-              <a
-                class="insta"
-                onclick="window.open('https://www.instagram.com/gosrock_official/')"
-                ><img
-                  class="insta-logo"
-                  src="/dist/insta.png"
-                />@gosrock_official</a
-              >
-              <a
-                class="insta"
-                onclick="window.open('https://www.instagram.com/gosrock_archive/')"
-                ><img
-                  class="insta-logo"
-                  src="/dist/insta.png"
-                />@gosrock_archive</a
-              >
-              <a
-                class="youtube"
-                onclick="window.open('https://www.youtube.com/channel/UCBjYErlHCG0vfcdDmaeOIxQ')"
-                ><img class="youtube-logo" src="/dist/youtube.png" />GOSROCK</a
-              >
-            </div>
-          </div>
-          <div class="menu">
-            <a class="band" href="/dist/band/band.html">Band</a>
-                      <a class="members" href="/dist/members/members.html">22nd Members</a>
-                      <a class="memory" href="/dist/memory/memory.html">Memory</a>
-                      <a class="study" href="/dist/study/study.html">GFP</a>
-                      <a class="madeby" href="/dist/madeby/mathouse.html">Mat House</a>
-                      <a class="mathouse" href="/dist/madeby/madeby.html">Made By</a>
+                class="insta-logo"
+                src="https://i.ibb.co/bdbq4hX/insta.png"
+              />@gosrock_official</a
+            >
+            <a
+              class="insta"
+              onclick="window.open('https://www.instagram.com/gosrock_archive/')"
+              ><img
+                class="insta-logo"
+                src="https://i.ibb.co/bdbq4hX/insta.png"
+              />@gosrock_archive</a
+            >
+            <a
+              class="youtube"
+              onclick="window.open('https://www.youtube.com/channel/UCBjYErlHCG0vfcdDmaeOIxQ')"
+              ><img
+                class="youtube-logo"
+                src="https://i.ibb.co/4fRq4YT/youtube.png"
+              />GOSROCK</a
+            >
           </div>
         </div>
-      </header>
-    <div id="map" style="width:1500px; height:700px; z-index : 1;">
-        <img src="순위.jpg" style="width:600px; height:400px; position: absolute; z-index : 3;">
-        <img src="참고사항.jpg" style="width:400px; height:300px; position: absolute; left : 0px; bottom:0px; z-index : 2;">
+        <div class="menu">
+          <a class="band" href="/dist/band/band.html">Band</a>
+          <a class="members" href="/dist/members/members.html">22nd Members</a>
+          <a class="memory" href="/dist/memory/memory.html">Memory</a>
+          <a class="study" href="/dist/study/study.html">GFP</a>
+          <a class="mathouse" href="/dist/mathouse/mathouse.html">Mat House</a>
+          <a class="madeby" href="/dist/madeby/madeby.html">Made By</a>
+        </div>
+      </div>
+    </header>
+    <div id="map" style="width: 1500px; height: 700px; z-index: 1">
+      <img
+        src="순위.jpg"
+        style="width: 600px; height: 400px; position: absolute; z-index: 3"
+      />
+      <img
+        src="참고사항.jpg"
+        style="
+          width: 400px;
+          height: 300px;
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          z-index: 2;
+        "
+      />
     </div>
 
     <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bba78b591ccaeafec46beae346d55452&libraries=clusterer"></script>
     <script>
-      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-          mapOption = {
-              center: new kakao.maps.LatLng(37.55, 126.92), // 지도의 중심좌표
-              level: 3, // 지도의 확대 레벨
-              mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
-          }; 
+      var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+        mapOption = {
+          center: new kakao.maps.LatLng(37.55, 126.92), // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
+          mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
+        };
 
-      // 지도를 생성한다 
-      var map = new kakao.maps.Map(mapContainer, mapOption); 
-        var 데이터 = [
-      [37.549283171692764, 126.92266936051568, '<div style="padding: 5px">4위 : 칸다소바</div>'],
-      [37.547381746439704, 126.92218473191838, '<div style="padding: 5px">2위 : 금복식당</div>'],
-      [37.547962361705714, 126.92138634561454, '<div style="padding: 5px">5위 : 상수치치</div>'],
-      [37.54928022902589, 126.92162260121076, '<div style="padding: 5px">1위 : ??????</div>'],
-      [37.54858962885207, 126.91963448055547, '<div style="padding: 5px">3위 : 더보이즈피자</div>'],
-      [37.54798113520158,126.92252642401589, '<div style="padding: 5px">6위 : 명장</div>'],
-      [37.54858195630472, 126.92509460118889, '<div style="padding: 5px">7위 : 플레이트946</div>'],
-      [37.549647878997256, 126.92237475819786, '<div style="padding: 5px">8위 : 윤씨밀방</div>'],
-      [37.547321259846264, 126.92268836144713, '<div style="padding: 5px">9위 : 오츠커피</div>'],
-      [37.5484353985516, 126.92486559331537, '<div style="padding: 5px">10위 :소담카츠</div>'],
-      [37.55287947370241, 126.92471118260833, '<div style="padding: 5px">11위 : 율촌</div>'],
-      [37.55272555882585, 126.92355135296319, '<div style="padding: 5px">12위 :다락투</div>'],
-      [37.548064553558326, 126.92264232890344, '<div style="padding: 5px">13위 : 국제식당</div>'],
-      [37.55553262412207, 126.92426147828186, '<div style="padding: 5px">14위 : 작업실</div>'],
-      [37.548626535945445, 126.9209188411755, '<div style="padding: 5px">15위 : 소코아</div>'],
-      [37.55264422484365, 126.9231751488052, '<div style="padding: 5px">16위 : 마코토</div>'],
-      [37.55682920024244, 126.9264642573932, '<div style="padding: 5px">17위 : 노가리</div>'],
-      [37.55258962832253, 126.92235472951877, '<div style="padding: 5px">18위 : 카미야</div>'],
-      [37.5533499391538, 126.92782854731853, '<div style="padding: 5px">19위 : 발바리네</div>'],
-      [37.547629191723686, 126.92168656404736, '<div style="padding: 5px">20위 : 후계동</div>']
-       ];   
+      // 지도를 생성한다
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+      var 데이터 = [
+        [
+          37.549283171692764,
+          126.92266936051568,
+          '<div style="padding: 5px">4위 : 칸다소바</div>',
+        ],
+        [
+          37.547381746439704,
+          126.92218473191838,
+          '<div style="padding: 5px">2위 : 금복식당</div>',
+        ],
+        [
+          37.547962361705714,
+          126.92138634561454,
+          '<div style="padding: 5px">5위 : 상수치치</div>',
+        ],
+        [
+          37.54928022902589,
+          126.92162260121076,
+          '<div style="padding: 5px">1위 : ??????</div>',
+        ],
+        [
+          37.54858962885207,
+          126.91963448055547,
+          '<div style="padding: 5px">3위 : 더보이즈피자</div>',
+        ],
+        [
+          37.54798113520158,
+          126.92252642401589,
+          '<div style="padding: 5px">6위 : 명장</div>',
+        ],
+        [
+          37.54858195630472,
+          126.92509460118889,
+          '<div style="padding: 5px">7위 : 플레이트946</div>',
+        ],
+        [
+          37.549647878997256,
+          126.92237475819786,
+          '<div style="padding: 5px">8위 : 윤씨밀방</div>',
+        ],
+        [
+          37.547321259846264,
+          126.92268836144713,
+          '<div style="padding: 5px">9위 : 오츠커피</div>',
+        ],
+        [
+          37.5484353985516,
+          126.92486559331537,
+          '<div style="padding: 5px">10위 :소담카츠</div>',
+        ],
+        [
+          37.55287947370241,
+          126.92471118260833,
+          '<div style="padding: 5px">11위 : 율촌</div>',
+        ],
+        [
+          37.55272555882585,
+          126.92355135296319,
+          '<div style="padding: 5px">12위 :다락투</div>',
+        ],
+        [
+          37.548064553558326,
+          126.92264232890344,
+          '<div style="padding: 5px">13위 : 국제식당</div>',
+        ],
+        [
+          37.55553262412207,
+          126.92426147828186,
+          '<div style="padding: 5px">14위 : 작업실</div>',
+        ],
+        [
+          37.548626535945445,
+          126.9209188411755,
+          '<div style="padding: 5px">15위 : 소코아</div>',
+        ],
+        [
+          37.55264422484365,
+          126.9231751488052,
+          '<div style="padding: 5px">16위 : 마코토</div>',
+        ],
+        [
+          37.55682920024244,
+          126.9264642573932,
+          '<div style="padding: 5px">17위 : 노가리</div>',
+        ],
+        [
+          37.55258962832253,
+          126.92235472951877,
+          '<div style="padding: 5px">18위 : 카미야</div>',
+        ],
+        [
+          37.5533499391538,
+          126.92782854731853,
+          '<div style="padding: 5px">19위 : 발바리네</div>',
+        ],
+        [
+          37.547629191723686,
+          126.92168656404736,
+          '<div style="padding: 5px">20위 : 후계동</div>',
+        ],
+      ];
 
-      for (var i=0; i < 데이터.length; i++){
-      // 지도에 마커를 생성하고 표시한다
-      var marker = new kakao.maps.Marker({
+      for (var i = 0; i < 데이터.length; i++) {
+        // 지도에 마커를 생성하고 표시한다
+        var marker = new kakao.maps.Marker({
           position: new kakao.maps.LatLng(데이터[i][0], 데이터[i][1]), // 마커의 좌표
-          map: map // 마커를 표시할 지도 객체
-      });
+          map: map, // 마커를 표시할 지도 객체
+        });
 
-      // 인포윈도우를 생성합니다
-      var infowindow = new kakao.maps.InfoWindow({
-        content : 데이터[i][2]
-      });
-  
-      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+        // 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+          content: 데이터[i][2],
+        });
+
+        kakao.maps.event.addListener(
+          marker,
+          "mouseover",
+          makeOverListener(map, marker, infowindow)
+        );
+        kakao.maps.event.addListener(
+          marker,
+          "mouseout",
+          makeOutListener(infowindow)
+        );
       }
 
-      // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+      // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
       function makeOverListener(map, marker, infowindow) {
-      return function() {
-        infowindow.open(map, marker);
-     };
-     }
+        return function () {
+          infowindow.open(map, marker);
+        };
+      }
 
-     // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-     function makeOutListener(infowindow) {
-     return function() {
-        infowindow.close();
-     };
-     }
+      // 인포윈도우를 닫는 클로저를 만드는 함수입니다
+      function makeOutListener(infowindow) {
+        return function () {
+          infowindow.close();
+        };
+      }
 
-      map.setZoomable(false);   
+      map.setZoomable(false);
     </script>
-</body>
+  </body>
 </html>
