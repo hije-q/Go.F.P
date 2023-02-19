@@ -9,7 +9,6 @@
 
 body {
   background-image: url("배경/코르크4.png");
-  /* background-image: url('배경/블랙보드.jpg') ; */
   background-color: #ffffff;
   /* background-repeat : no-repeat;*/
   background-size: contain;
@@ -20,40 +19,21 @@ html,
 body {
   width: 1900px;
   height: auto;
+  
+  
 }
-
+html{
+  zoom:80%;
+}
 body {
   margin: 0;
+  
 }
 
 .background {
   width: 350px;
   transform: translate(-100px, 450px);
   z-index: 1;
-}
-
-.image_p {
-  z-index: 9999 !important;
-  max-height: 350px;
-  max-width: 350px;
-  /* object-fit: contain; */
-  /* border: 8px solid white;
-    border-bottom-width: 40px; */
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  animation: slide 2s;
-}
-.image_p:hover {
-  z-index: 1;
-  transition: 0.5s;
-  cursor: pointer;
-  filter: sepia(0);
-}
-
-.image_p:active {
-  z-index: 50 !important;
-  transform: scale(2.5) !important;
-  transition: 0.5s;
-  filter: sepia(0);
 }
 
 .image_sero {
@@ -101,105 +81,69 @@ body {
 
 .group {
   width: 20%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
   text-align: center;
 }
 
 .group1 {
   width: 60%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
-  text-align: center;
   float: left;
   margin-left: 170px;
-  margin-top: -120px;
+  margin-top: -100px;
+  text-align: center;
 }
 
 .group2 {
-  margin-top: -50px;
+  margin-top: 0px;
   width: 80%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
-  text-align: center;
   float: left;
   margin-bottom: -200px;
+  text-align: center;
 }
 
 .group3 {
-  margin-top: -200px;
-  margin-bottom: -100px;
+  margin-top: -150px;
+  margin-bottom: 0px;
   width: 80%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
   text-align: center;
   float: right;
 }
 
 .group4 {
   width: 80%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
-  text-align: center;
   position: relative;
-  margin-top: 500px;
+  margin-top: 600px;
+  text-align: center;
 }
 
 .group5 {
   width: 50%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
-  text-align: center;
   float: left;
-  margin-top: 100px;
+  margin-top: 200px;
   position: relative;
+  text-align: center;
 }
 .group6 {
+  margin-top: 50px;
   width: 50%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
   text-align: center;
   float: left;
 }
 .group7 {
-  margin-top: 100px;
+  margin-top: 200px;
   width: 50%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
   float: left;
+  text-align: center;
 }
 .group8 {
-  margin-top: -700px;
-  margin-bottom: -350px;
+  margin-top: -600px;
+  margin-bottom: -300px;
   width: 50%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
-  text-align: center;
   float: left;
+  text-align: center;
 }
 .group9 {
   width: 100%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
-  text-align: center;
   margin-left: -100px;
-  float: left;
-}
-.group10 {
-  width: 50%;
-  font-family: "Cafe24Shiningstar";
-  font-size: 50px;
-  color: white;
   text-align: center;
   float: left;
 }
@@ -240,15 +184,6 @@ li {
   cursor: pointer;
 }
 
-@font-face {
-  font-family: "Cafe24Shiningstar";
-  font-weight: normal;
-  font-style: normal;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/cafe24/Cafe24Shiningstar.woff2)
-    format("woff2");
-  font-display: swap;
-}
-
 video::-webkit-media-controls-timeline {
   display: none !important;
 }
@@ -262,13 +197,3 @@ video::-webkit-media-controls-time-remaining-display {
   display: none !important;
 }
 
-@keyframes slide {
-  from {
-    left: -500px;
-    opacity: 0;
-  }
-  to {
-    left: 0px;
-    opacity: 1;
-  }
-}
