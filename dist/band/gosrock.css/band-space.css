@@ -47,7 +47,7 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
   .tl-item:hover {
-    width: 30% !important;
+    width: 600px !important;
   }
   .tl-item:hover:after {
     opacity: 0;

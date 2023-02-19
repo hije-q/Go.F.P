@@ -3,9 +3,6 @@
 *::before {
   box-sizing: border-box;
 }
-html {
-  zoom: 80%;
-}
 
 body {
   margin: 0;
@@ -15,6 +12,7 @@ body {
 }
 header {
   zoom: 80%;
+  /* width: 1500px; */
 }
 body {
   margin: 0;
