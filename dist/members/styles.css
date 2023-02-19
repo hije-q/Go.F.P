@@ -15,7 +15,12 @@ p {
   font-family: "NEXON Lv2 Gothic";
 }
 /*초기화*/
-
+html{
+  zoom:80%;
+}
+html,body{
+  /* width:1920px; */
+}
 li {
   list-style: none;
 }
