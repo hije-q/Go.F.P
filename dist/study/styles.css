@@ -2,20 +2,18 @@ html {
     zoom:80%;
 }
 
-body {
-    margin:0;
-}
 
-html, body { background: black }
-html,body { 
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: black;
   height: 100%;
   font-family: "Cormorant Garamond", serif;
 }
 /*body { margin: auto; } */
 
 /* menu--------------------------------------*/
-
-
 
 .title {
   display: flex;
@@ -36,6 +34,7 @@ audio {
     font-size: 12vmin;
     animation: fadein1 2s;
     -webkit-animation: fadein1 2s;
+    /*box-shadow  : 0px 0px 40px 5px red;*/
 }
 
 @keyframes fadein1 {
@@ -205,11 +204,18 @@ audio {
 
 .maincontainer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  float: left;
+}
+
+.flex-item {
+    margin: 50px;
 }
 
 .namecard {
+ background-color: blue;
   display: flex;
+  flex-direction: column;
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
   box-sizing: inherit;
@@ -219,14 +225,14 @@ audio {
                 -1px -1px 1px rgba(179, 179, 179, .5),
                 1px 1px 0 rgba(255, 255, 255, 0.55),
                 0 1px 3px white;
-  overflow: hidden;
   color: #191919;
   padding-left: 5vmin;
   padding-right: 5vmin;
   padding-top: 0.5vh;
+
   
-  animation: fadeinCard 28s;
-  -webkit-animation: fadeinCard 28s;
+  animation: fadeinCard 0s;
+  -webkit-animation: fadeinCard 0s;
 }
 
 @keyframes fadeinCard {
@@ -367,19 +373,31 @@ p {
   margin: 0;
 }
 
+/* mainpicture -----------------------------------------------------------------*/
+
+.picturecontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainpicture {
+    width: 60%;
+    text-align: center;
+    background-color: purple;
+}
+
+
 
 
 
 /*gallery 2 ------------------------------------------------------------*/
-.cardGallery {
-  display: flex;
-  justify-content: center;
-}
 
-.container {
-  position: relative;
-  top: 30vh; 
-  animation: fadeinGallery 1s;
+
+.gallery {
+    display: flex;
+    position: relative;
+    background-color: red;
+    animation: fadeinGallery 1s;
 
 }
 
@@ -401,11 +419,6 @@ p {
 }
 
 
-.container {
-	max-width: 100rem;
-	margin: 0 auto;
-	padding: 0 2rem 2rem;
-}
 
 .gallery {
 	display: flex;
@@ -418,9 +431,12 @@ p {
 	/* Minimum width of 24rem and grow to fit available space */
 	flex: 1 0 30vw;
 	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-	margin: 5vmax;
+	margin: 2vw;
 	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
 	overflow: hidden;
+    border: red solid 2px;
+    padding: 5px;
+    padding-bottom: 20px;
 }
 
 .gallery-image {
@@ -449,7 +465,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 	.gallery {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-		grid-gap: 5vmin;
+		grid-gap: 3vmin;
 	}
 
 	.gallery,
