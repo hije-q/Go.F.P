@@ -7,7 +7,9 @@
 :root {
   font-size: 12px;
 }
-
+header{
+  zoom:80%;
+}
 body {
   margin: 0;
   --color-text: #000100;
