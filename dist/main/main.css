@@ -5,6 +5,7 @@
 }
 
 body {
+  
   margin: 0;
 }
 :root {
@@ -12,7 +13,6 @@ body {
 }
 header {
   zoom: 80%;
-  /* width: 1500px; */
 }
 body {
   margin: 0;
@@ -192,7 +192,7 @@ a:focus {
 
 /*! locomotive-scroll v4.0.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
-  overflow: hidden;
+  overflow:hidden;
 }
 
 html.has-scroll-dragging {
@@ -203,7 +203,9 @@ html.has-scroll-dragging {
 }
 
 .has-scroll-smooth body {
-  overflow: hidden;
+  /* overflow:hidden; */
+  
+  -webkit-overflow-scrolling: touch;
 }
 
 .has-scroll-smooth [data-scroll-container] {
