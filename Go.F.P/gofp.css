@@ -19,6 +19,7 @@
 html, body { background: black }
 html,body { 
   height: 100%;
+  font-family: "Cormorant Garamond", serif;
 }
 /*body { margin: auto; } */
 
@@ -406,7 +407,7 @@ p {
 .container {
   position: relative;
   top: 60vh;
-  animation: fadeinGallery 30s;
+  animation: fadeinGallery 1s;
 
 }
 
@@ -434,20 +435,6 @@ p {
 	padding: 0 2rem 2rem;
 }
 
-.heading {
-	font-family: "Montserrat", Arial, sans-serif;
-	font-size: 4rem;
-	font-weight: 500;
-	line-height: 1.5;
-	text-align: center;
-	padding: 3.5rem 0;
-	color: #1a1a1a;
-}
-
-.heading span {
-	display: block;
-}
-
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
@@ -457,9 +444,9 @@ p {
 
 .gallery-item {
 	/* Minimum width of 24rem and grow to fit available space */
-	flex: 1 0 24rem;
+	flex: 1 0 30vw;
 	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-	margin: 1rem;
+	margin: 5vmax;
 	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
 	overflow: hidden;
 }
@@ -490,7 +477,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 	.gallery {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-		grid-gap: 2rem;
+		grid-gap: 5vmin;
 	}
 
 	.gallery,
