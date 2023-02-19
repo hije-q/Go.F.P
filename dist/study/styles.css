@@ -378,7 +378,7 @@ p {
 
 .container {
   position: relative;
-  top: 30vh;
+  top: 30vh; 
   animation: fadeinGallery 1s;
 
 }
