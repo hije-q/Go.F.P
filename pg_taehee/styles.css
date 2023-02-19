@@ -4,6 +4,19 @@ body, ul, h2, p {
 }
 /*초기화*/
 
+@font-face {
+    font-family: "NEXON Lv2 Gothic";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #111;
+    color: #999;
+    font-family: "NEXON Lv2 Gothic";
+}
+
 li {
     list-style: none;
 }
@@ -11,6 +24,10 @@ li {
 body {
     background-color: #111;
     color: #999;
+}
+
+html {
+    zoom: 80%;
 }
 
 .title {
@@ -182,7 +199,7 @@ IE6-9 */
 }
 
 .profile_pch {
-    color: #c5cbd0;
+    color: #dddfe0;
 }
 
 .profile_cmh {
@@ -206,7 +223,7 @@ IE6-9 */
 }
 
 .profile_kth {
-    color: cornflowerblue;
+    color: #e7e6df;
 }
 
 .profile_lys {
@@ -214,7 +231,7 @@ IE6-9 */
 }
 
 .profile_lhg {
-    color: gainsboro;
+    color: #b4af9f;
 }
 
 .profile_syr {
