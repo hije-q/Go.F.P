@@ -1,6 +1,10 @@
 html {
   zoom:80%;
 }
+
+html,body{
+  /* width: 1920px; */
+}
 body {
     font-family: "Source Sans Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -47,7 +51,7 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
   .tl-item:hover {
-    width: 30% !important;
+    width: 600px !important;
   }
   .tl-item:hover:after {
     opacity: 0;

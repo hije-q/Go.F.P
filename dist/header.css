@@ -5,11 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
-
-.gosrock-header {
+header {
   position: -webkit-sticky; /* 사파리  */
   position: sticky;
-  top: 0;
+  top: 0px;
+  z-index: 9999;
+}
+.gosrock-header {
   width: 100%;
   height: 74px;
   background-color: rgba(0, 0, 0, 1);
