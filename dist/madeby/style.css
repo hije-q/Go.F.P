@@ -1,12 +1,11 @@
 html {
-  zoom:80%;
+  zoom: 80%;
+  background: rgb(255, 255, 255);
 }
-html,
+
 body {
   height: 100%;
-  background: rgb(255,255,255);
-}
-body {
+  background: rgb(255, 255, 255);
   overflow: hidden;
 }
 .scroll-animations-example > .scrollsection {
@@ -19,7 +18,7 @@ body {
   margin: 0 -30vh 0 3vh;
 }
 .scroll-animations-example > .scrollsection > .item::before {
-  content: '';
+  content: "";
   display: inline-block;
   vertical-align: middle;
   height: 100%;
@@ -27,7 +26,6 @@ body {
 .scroll-animations-example > .scrollsection > .item.-big {
   height: 80vh;
   width: 60vh;
-  
 }
 .scroll-animations-example > .scrollsection > .item.-big1 {
   height: 80vh;
@@ -58,37 +56,37 @@ body {
   width: 45vh;
   z-index: 3;
 }
-.scroll-animations-example> .scrollsection >.item.white1{
+.scroll-animations-example > .scrollsection > .item.white1 {
   height: 60vh;
   width: 25vh;
   z-index: 0;
 }
-.scroll-animations-example> .scrollsection >.item.-normal2{
+.scroll-animations-example > .scrollsection > .item.-normal2 {
   height: 15vh;
   width: 40vh;
   z-index: 0;
 }
-.scroll-animations-example> .scrollsection >.item.-normal3{
+.scroll-animations-example > .scrollsection > .item.-normal3 {
   height: 20vh;
   width: 40vh;
   z-index: 1;
 }
-.scroll-animations-example> .scrollsection >.item.jfeel{
+.scroll-animations-example > .scrollsection > .item.jfeel {
   height: 30vh;
   width: 50vh;
   z-index: 3;
 }
-.scroll-animations-example> .scrollsection >.item.jso{
+.scroll-animations-example > .scrollsection > .item.jso {
   height: 25vh;
   width: 38vh;
   z-index: 3;
 }
-.scroll-animations-example> .scrollsection >.item.DoDo{
+.scroll-animations-example > .scrollsection > .item.DoDo {
   height: 76vh;
   width: 60vh;
   z-index: 1;
 }
-.scroll-animations-example> .scrollsection >.item.DoDofeel{
+.scroll-animations-example > .scrollsection > .item.DoDofeel {
   height: 19vh;
   width: 40vh;
   z-index: 3;
@@ -98,32 +96,32 @@ body {
   width: 50vh;
   z-index: 1;
 }
-.scroll-animations-example > .scrollsection > .item.yfeel{
+.scroll-animations-example > .scrollsection > .item.yfeel {
   height: 20vh;
   width: 40vh;
   z-index: 3;
 }
-.scroll-animations-example > .scrollsection > .item.yn{
+.scroll-animations-example > .scrollsection > .item.yn {
   height: 43vh;
   width: 60vh;
   z-index: 1;
 }
-.scroll-animations-example > .scrollsection > .item.chai{
+.scroll-animations-example > .scrollsection > .item.chai {
   height: 50vh;
   width: 40vh;
   z-index: 2;
 }
-.scroll-animations-example > .scrollsection > .item.chain{
+.scroll-animations-example > .scrollsection > .item.chain {
   height: 50vh;
   width: 70vh;
   z-index: 1;
 }
-.scroll-animations-example > .scrollsection > .item.no{
+.scroll-animations-example > .scrollsection > .item.no {
   height: 20vh;
   width: 10vh;
   z-index: 0;
 }
-.scroll-animations-example > .scrollsection > .item.space{
+.scroll-animations-example > .scrollsection > .item.space {
   height: 20vh;
   width: 40vh;
   z-index: 0;
@@ -166,7 +164,6 @@ body {
 .scroll-animations-example > .scrollsection > .item.-small.-horizontal {
   height: 35vh;
   width: 50vh;
-  
 }
 .scroll-animations-example > .scrollsection > .item.-small.-horizontal4 {
   height: 20vh;
@@ -224,7 +221,7 @@ body {
   bottom: -1vh;
 }
 .scroll-animations-example > .scrollsection > .item:nth-of-type(37) {
-  bottom: 29vh;
+  bottom: 20vh;
 }
 .scroll-animations-example > .scrollsection > .item > .image {
   height: 100%;
@@ -235,21 +232,29 @@ body {
   opacity: 1;
   pointer-events: none;
   transform: translateX(0) translateY(0) scale(0);
- 
 }
 .scroll-animations-example > .scrollsection > .item:nth-of-type(4n) > .image {
   transform: translateX(-30vh) translateY(-30vh) scale(0.8);
   transition-delay: 0;
 }
-.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+.scroll-animations-example
+  > .scrollsection
+  > .item:nth-of-type(4n - 1)
+  > .image {
   transform: translateX(30vh) translateY(30vh) scale(0.8);
   transition-delay: 0.05s;
 }
-.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+.scroll-animations-example
+  > .scrollsection
+  > .item:nth-of-type(4n - 2)
+  > .image {
   transform: translateX(-30vh) translateY(30vh) scale(0.8);
   transition-delay: 0.1s;
 }
-.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+.scroll-animations-example
+  > .scrollsection
+  > .item:nth-of-type(4n - 3)
+  > .image {
   transform: translateX(-30vh) translateY(-30vh) scale(0.8);
   transition-delay: 0.15s;
 }
@@ -263,5 +268,3 @@ body {
   pointer-events: auto;
   transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
 }
-
-
