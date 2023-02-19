@@ -13,6 +13,10 @@ body {
     color: #999;
 }
 
+html {
+    zoom:80%;
+}
+
 .title {
     font-size: larger;
     text-align: center;
