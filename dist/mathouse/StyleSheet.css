@@ -1,7 +1,13 @@
 body {
-    margin:0;
+  margin: 0;
 }
 
 html {
-    zoom:80%;
+  zoom: 80%;
+}
+
+.description {
+  font-size: 1rem;
+  text-align: center;
+  justify-self: center;
 }

@@ -2,9 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>고스락 맛집 지도</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GOSROCK</title>
+    <link rel="shortcut icon" href="/dist/favicon.ico" />
     <link rel="stylesheet" href="/dist/mathouse/StyleSheet.css" />
     <link rel="stylesheet" type="text/css" href="/dist/header.css" />
+    <script
+      charset="UTF-8"
+      class="daum_roughmap_loader_script"
+      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -50,73 +57,252 @@
         </div>
       </div>
     </header>
-    <div id="map" style="width: 100%; height: 100vh"></div>
+    <div id="map" style="width: 100%; height: 100vh; z-index: 1">
+      <img
+        src="순위.jpg"
+        style="width: 600px; height: 400px; position: absolute; z-index: 3"
+      />
+      <img
+        src="참고사항.jpg"
+        style="
+          width: 400px;
+          height: 300px;
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          z-index: 2;
+        "
+      />
+    </div>
 
-    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bba78b591ccaeafec46beae346d55452&libraries=clusterer"></script>
+    <script>
+      (window.kakao = window.kakao || {}),
+        (window.kakao.maps = window.kakao.maps || {}),
+        window.daum && window.daum.maps
+          ? (window.kakao.maps = window.daum.maps)
+          : ((window.daum = window.daum || {}),
+            (window.daum.maps = window.kakao.maps)),
+        (function () {
+          function a() {
+            if (E.length) {
+              t(I[E.shift()], a).start();
+            } else e();
+          }
+          function t(a, t) {
+            var e = document.createElement("script");
+            return (
+              (e.charset = "utf-8"),
+              (e.onload = t),
+              (e.onreadystatechange = function () {
+                /loaded|complete/.test(this.readyState) && t();
+              }),
+              {
+                start: function () {
+                  (e.src = a || ""),
+                    document.getElementsByTagName("head")[0].appendChild(e),
+                    (e = null);
+                },
+              }
+            );
+          }
+          function e() {
+            for (; c[0]; ) c.shift()();
+            o.readyState = 2;
+          }
+          var o = (kakao.maps = kakao.maps || {});
+          if (void 0 === o.readyState)
+            (o.onloadcallbacks = []), (o.readyState = 0);
+          else if (2 === o.readyState) return;
+          (o.VERSION = {
+            ROADMAP: "2212ejo",
+            ROADMAP_SUFFIX: "",
+            HYBRID: "2212ejo",
+            SR: "3.00",
+            ROADVIEW: "7.00",
+            ROADVIEW_FLASH: "200402",
+            BICYCLE: "6.00",
+            USE_DISTRICT: "2212ejo",
+            SKYVIEW_VERSION: "160114",
+            SKYVIEW_HD_VERSION: "160107",
+          }),
+            (o.RESOURCE_PATH = {
+              ROADVIEW_AJAX:
+                "//t1.daumcdn.net/roadviewjscore/core/css3d/200204/standard/1580795088957/roadview.js",
+              ROADVIEW_CSS:
+                "//t1.daumcdn.net/roadviewjscore/core/openapi/standard/230112/roadview.js",
+            });
+          for (
+            var n,
+              r = "https:" == location.protocol ? "https:" : "http:",
+              s = "",
+              i = document.getElementsByTagName("script"),
+              d = i.length;
+            (n = i[--d]);
+
+          )
+            if (/\/(beta-)?dapi\.kakao\.com\/v2\/maps\/sdk\.js\b/.test(n.src)) {
+              s = n.src;
+              break;
+            }
+          i = null;
+          var c = o.onloadcallbacks,
+            E = ["v3"],
+            S = "",
+            I = {
+              v3: r + "//t1.daumcdn.net/mapjsapi/js/main/4.4.8/kakao.js",
+              services:
+                r +
+                "//t1.daumcdn.net/mapjsapi/js/libs/services/1.0.2/services.js",
+              drawing:
+                r +
+                "//t1.daumcdn.net/mapjsapi/js/libs/drawing/1.2.6/drawing.js",
+              clusterer:
+                r +
+                "//t1.daumcdn.net/mapjsapi/js/libs/clusterer/1.0.9/clusterer.js",
+            },
+            _ = (function (a) {
+              var t = {};
+              return (
+                a.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (a, e, o) {
+                  t[e] = o;
+                }),
+                t
+              );
+            })(s);
+          (S = _.appkey), S && (o.apikey = S), (o.version = "4.4.8");
+          var R = _.libraries;
+          if ((R && (E = E.concat(R.split(","))), "false" !== _.autoload)) {
+            for (var d = 0, l = E.length; d < l; d++)
+              !(function (a) {
+                a &&
+                  document.write(
+                    '<script charset="UTF-8" src="' + a + '"><\/script>'
+                  );
+              })(I[E[d]]);
+            o.readyState = 2;
+          }
+          o.load = function (t) {
+            switch ((c.push(t), o.readyState)) {
+              case 0:
+                (o.readyState = 1), a();
+                break;
+              case 2:
+                e();
+            }
+          };
+        })();
+    </script>
+
     <script>
       var mapContainer = document.getElementById("map"), // 지도를 표시할 div
         mapOption = {
-          center: new kakao.maps.LatLng(37.55036, 126.92447), // 지도의 중심좌표
-          level: 4, // 지도의 확대 레벨
+          center: new kakao.maps.LatLng(37.55, 126.92), // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
           mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
         };
 
       // 지도를 생성한다
       var map = new kakao.maps.Map(mapContainer, mapOption);
-
-      // 커스텀 오버레이를 지도에 표시합니다
-      customOverlay.setMap(map);
-
       var 데이터 = [
         [
           37.549283171692764,
           126.92266936051568,
-          '<div style="padding: 5px">칸다소바</div>',
+          '<div class="description" style="padding: 5px">4위 : 칸다소바</div>',
         ],
         [
           37.547381746439704,
           126.92218473191838,
-          '<div style="padding: 5px">금복식당</div>',
+          '<div class="description" style="padding: 5px">2위 : 금복식당</div>',
         ],
         [
           37.547962361705714,
           126.92138634561454,
-          '<div style="padding: 5px">상수치치</div>',
+          '<div class="description" style="padding: 5px">5위 : 상수치치</div>',
         ],
         [
           37.54928022902589,
           126.92162260121076,
-          '<div style="padding: 5px">제순식당</div>',
+          '<div class="description" style="padding: 5px">1위 : ??????</div>',
         ],
         [
           37.54858962885207,
           126.91963448055547,
-          '<div style="padding: 5px">더보이즈피자</div>',
+          '<div class="description" style="padding: 5px">3위 : 더피자보이즈</div>',
         ],
         [
           37.54798113520158,
           126.92252642401589,
-          '<div style="padding: 5px">명장</div>',
+          '<div class="description" style="padding: 5px">6위 : 명장</div>',
         ],
         [
           37.54858195630472,
           126.92509460118889,
-          '<div style="padding: 5px">플레이트946</div>',
+          '<div class="description" style="padding: 5px">7위 : 플레이트946</div>',
         ],
         [
           37.549647878997256,
           126.92237475819786,
-          '<div style="padding: 5px">윤씨밀방</div>',
+          '<div class="description" style="padding: 5px">8위 : 윤씨밀방</div>',
         ],
         [
           37.547321259846264,
           126.92268836144713,
-          '<div style="padding: 5px">오츠커피</div>',
+          '<div class="description" style="padding: 5px">9위 : 오츠커피</div>',
         ],
         [
           37.5484353985516,
           126.92486559331537,
-          '<div style="padding: 5px">소담카츠</div>',
+          '<div class="description" style="padding: 5px">10위 :소담카츠</div>',
+        ],
+        [
+          37.55287947370241,
+          126.92471118260833,
+          '<div class="description" style="padding: 5px">11위 : 율촌</div>',
+        ],
+        [
+          37.55272555882585,
+          126.92355135296319,
+          '<div class="description" style="padding: 5px">12위 :다락투</div>',
+        ],
+        [
+          37.548064553558326,
+          126.92264232890344,
+          '<div class="description" style="padding: 5px">13위 : 국제식당</div>',
+        ],
+        [
+          37.55553262412207,
+          126.92426147828186,
+          '<div class="description" style="padding: 5px">14위 : 작업실</div>',
+        ],
+        [
+          37.548626535945445,
+          126.9209188411755,
+          '<div class="description" style="padding: 5px">15위 : 소코아</div>',
+        ],
+        [
+          37.55264422484365,
+          126.9231751488052,
+          '<div class="description" style="padding: 5px">16위 : 마코토</div>',
+        ],
+        [
+          37.55682920024244,
+          126.9264642573932,
+          '<div class="description" style="padding: 5px">17위 : 노가리</div>',
+        ],
+        [
+          37.55258962832253,
+          126.92235472951877,
+          '<div class="description" style="padding: 5px">18위 : 카미야</div>',
+        ],
+        [
+          37.5533499391538,
+          126.92782854731853,
+          '<div class="description" style="padding: 5px">19위 : 발바리네</div>',
+        ],
+        [
+          37.547629191723686,
+          126.92168656404736,
+          '<div class="description" style="padding: 5px">20위 : 후계동</div>',
         ],
       ];
 
@@ -157,6 +343,8 @@
           infowindow.close();
         };
       }
+
+      map.setZoomable(false);
     </script>
   </body>
 </html>
