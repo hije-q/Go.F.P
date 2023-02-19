@@ -384,7 +384,7 @@ p {
 }
 
 @keyframes fadeinGallery {
-  from {
+  from { 
       opacity:0;
   }
   to {
