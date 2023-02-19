@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("배경/코르크4.png");
+  background-image: url("https://i.ibb.co/0Qs1Vv5/4.png");
   background-color: #ffffff;
   /* background-repeat : no-repeat;*/
   background-size: contain;
@@ -19,15 +19,12 @@ html,
 body {
   width: 1920px;
   height: auto;
-  
-  
 }
-html{
-  zoom:80%;
+html {
+  zoom: 80%;
 }
 body {
   margin: 0;
-  
 }
 
 .background {
@@ -196,4 +193,3 @@ video::-webkit-media-controls-current-time-display {
 video::-webkit-media-controls-time-remaining-display {
   display: none !important;
 }
-
