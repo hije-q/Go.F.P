@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1
+    user-scalable=yes" />
     <title>GOSROCK</title>
     <link rel="shortcut icon" href="/dist/favicon.ico" />
     <link
@@ -16,6 +17,19 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" type="text/css" href="/dist/header.css" />
   </head>
+  <style>
+  @media( orientation: portrait ){
+    html {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100vh;
+      height: 100vw;
+    }
+  }
+  </style>
   <body>
     <header>
       <div class="gosrock-header">
