@@ -33,12 +33,17 @@ body {
   z-index: 3;
 }
 .scroll-animations-example > .scrollsection > .item.-big3 {
-  height: 80vh;
-  width: 50vh;
+  height: 100vh;
+  width: 65vh;
   z-index: 1;
 }
 .scroll-animations-example > .scrollsection > .item.j {
   height: 60vh;
+  width: 85vh;
+  z-index: 4;
+}
+.scroll-animations-example > .scrollsection > .item.tv {
+  height: 47vh;
   width: 80vh;
   z-index: 4;
 }
@@ -72,13 +77,13 @@ body {
   z-index: 1;
 }
 .scroll-animations-example > .scrollsection > .item.jfeel {
-  height: 30vh;
-  width: 50vh;
+  height: 39vh;
+  width: 66vh;
   z-index: 3;
 }
 .scroll-animations-example > .scrollsection > .item.jso {
-  height: 25vh;
-  width: 38vh;
+  height: 30vh;
+  width: 60vh;
   z-index: 3;
 }
 .scroll-animations-example > .scrollsection > .item.DoDo {
@@ -92,13 +97,13 @@ body {
   z-index: 3;
 }
 .scroll-animations-example > .scrollsection > .item.DoDoso {
-  height: 32vh;
-  width: 50vh;
+  height: 44vh;
+  width: 70vh;
   z-index: 1;
 }
 .scroll-animations-example > .scrollsection > .item.yfeel {
-  height: 20vh;
-  width: 40vh;
+  height: 25vh;
+  width: 50vh;
   z-index: 3;
 }
 .scroll-animations-example > .scrollsection > .item.yn {
@@ -164,6 +169,7 @@ body {
 .scroll-animations-example > .scrollsection > .item.-small.-horizontal {
   height: 35vh;
   width: 50vh;
+  z-index: 0;
 }
 .scroll-animations-example > .scrollsection > .item.-small.-horizontal4 {
   height: 20vh;
@@ -218,7 +224,7 @@ body {
   bottom: -10vh;
 }
 .scroll-animations-example > .scrollsection > .item:nth-of-type(36) {
-  bottom: -1vh;
+  bottom: 12vh;
 }
 .scroll-animations-example > .scrollsection > .item:nth-of-type(37) {
   bottom: 20vh;
