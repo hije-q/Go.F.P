@@ -7,7 +7,6 @@
 }
 
 .gosrock-header {
-  margin:0;
   position: -webkit-sticky; /* 사파리  */
   position: sticky;
   top: 0;
