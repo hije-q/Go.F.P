@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Anton&family=Black+Ops+One&family=Creepster&family=Gloock&family=Homemade+Apple&family=Mr+Dafoe&family=Nanum+Brush+Script&family=Nanum+Pen+Script&family=Nothing+You+Could+Do&family=Noto+Nastaliq+Urdu&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR&family=Noto+Serif+Tamil:wght@700&family=Oswald:wght@300&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@300&family=Rubik+Glitch&display=swap');
+
+.titlecontainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+}  
+
+.gofp {
+    position: relative;
+    color:hsl(0, 0%, 90%);
+    font-family: 'Nothing You Could Do';
+    font-size: 150px;
+    animation: fadein1 2s;
+    -webkit-animation: fadein1 2s;
+    font-weight: 600;
+    /*box-shadow  : 0px 0px 40px 5px red;*/
+}
+
+@keyframes fadein1 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+
+.firstP {
+    position: relative;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+    
+  }
+
+.frontP {
+    position: relative;
+    top: 3px;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+  }
+
+.words1{
+    position: relative;
+    z-index: 10;
+    top: 350px;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+    float: right;
+  }
+
+.words2{
+    position: relative;
+    z-index: 10;
+    top: 350px;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+
+  }
+
+  
+  
+.firstP .text, .frontP .text{
+    font-family: 'Nothing You Could Do';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.0;
+}
+
+.words1 .text, .words2 .text {
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1.0;
+  }
+  
+.firstP .write .word, .frontP .write .word, .words1 .write .word, .words2 .write .word {
+    color: hsl(0, 0%, 90%);
+    text-shadow: 0 0 0.1em currentColor;
+    transform-style: preserve-3d;
+    -webkit-animation: write linear both;
+            animation: write linear both;
+  }
+  
+.firstP .laser, .frontP .laser,.words1 .laser, .words2 .laser {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* To avoid the blur getting masked by the clip-path we had to duplicate the element */
+    filter: blur(4px) contrast(10);
+    pointer-events: none;
+  }
+  
+.firstP .laser .word, .frontP .laser .word, .words1 .laser .word, .words2 .laser .word {
+    display: inline-block;
+  }
+  
+.firstP .laser .word, .frontP .laser .word, .words1 .laser .word, .words2 .laser .word {
+    color: hsl(0, 100%, 75%);
+    text-shadow: 0 0 0.1em currentColor;
+    transform: translateZ(5px);
+    -webkit-animation: laser linear both;
+            animation: laser linear both;
+  }
+  
+.firstP .write .word,
+.firstP .laser .word {
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms);
+            animation-delay: calc(0.3s + var(--word-index) * 160ms);
+
+  }
+
+.frontP .write .word,
+.frontP .laser .word {
+    -webkit-animation-duration: 2.7s;
+            animation-duration: 2.7s;
+    -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms + 1.5s);
+            animation-delay: calc(0.3s + var(--word-index) * 160ms + 1.5s);
+
+  }
+
+.words1 .write .word,
+.words1 .laser .word {
+    -webkit-animation-duration: 4.5s;
+            animation-duration: 4.5s;
+    -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms + 3s);
+            animation-delay: calc(0.3s + var(--word-index) * 160ms + 3s);
+    -webkit-animation-iteration-count: 1.01;
+            animation-iteration-count: 1.01; 
+  }
+
+.words2 .write .word,
+.words2 .laser .word {
+    -webkit-animation-duration: 4.5s;
+            animation-duration: 4.5s;
+    -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms + 6.5s);
+            animation-delay: calc(0.3s + var(--word-index) * 160ms + 6.5s);
+     -webkit-animation-iteration-count: 1.01;
+          animation-iteration-count: 1.01; 
+  }
+  
+.firstP:hover .word {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+  
+.frontP:hover .word {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+
+  @-webkit-keyframes write {
+    from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+    70%, to { -webkit-clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%); clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+  }
+  
+  @keyframes write {
+    from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+    70%, to { -webkit-clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%); clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+  }
+  
+  
+  @-webkit-keyframes laser {
+      from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+      70%, to { -webkit-clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%); clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
+    }
+    
+  @keyframes laser {
+      from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+      70%, to { -webkit-clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%); clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
+    }
+  

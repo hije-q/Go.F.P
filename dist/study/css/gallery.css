@@ -1,0 +1,103 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Anton&family=Black+Ops+One&family=Creepster&family=Gloock&family=Homemade+Apple&family=Labrada:wght@500&family=Mr+Dafoe&family=Nanum+Brush+Script&family=Nanum+Pen+Script&family=Nothing+You+Could+Do&family=Noto+Nastaliq+Urdu&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR&family=Noto+Serif+Tamil:wght@700&family=Oswald:wght@300&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@300&family=Rubik+Glitch&display=swap');
+
+.gallerycontainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 250px;
+    font-family: 'Nanum Brush Script', cursive;
+  }
+  
+  .container {
+    position: relative;
+    animation: fadeinGallery 1s;
+  
+  }
+  
+  @keyframes fadeinGallery {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+  
+  :root {
+      /* Base font size */
+      font-size: 10px;
+  }
+  
+  
+  .container {
+      max-width: 100rem;
+      margin: 0 auto;
+      padding: 0 2rem 2rem;
+  }
+  
+  .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      /* Compensate for excess margin on outer gallery flex items */
+      margin: -1rem -1rem;
+  }
+  
+  .gallery-item {
+      /* Minimum width of 24rem and grow to fit available space */
+      flex: 1 0 24rem;
+      /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+      margin: 1rem;
+      box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      border: hsl(0, 0%, 90%) 4px inset;
+      padding: 5px;
+      font-size: 10px;
+      box-shadow: 5px 5px 5px 0px hsl(0, 0%, 90%) ;
+        
+  }
+  
+  .gallery-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 400ms ease-out;
+  }
+  
+  .gallery-image:hover {
+      transform: scale(1.15);
+    background-color: #828282;
+  }
+  
+  @supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 8rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+.p {
+    font-size: 30px;
+}
+
+.memory2, .memory3 {
+    position: relative;
+    font-size: 80px;
+    color: hsl(0, 0%, 90%);
+    opacity: 0.9;
+    font-family: 'Nanum Brush Script', cursive;
+    text-align: center;
+    top: 290px;
+    bottom: 100px;
+    margin-top: 50px;
+}

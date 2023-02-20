@@ -1,0 +1,15 @@
+.mainpicturecontainer{
+    display: flex;
+    animation: fadeIn 30s;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+}
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
