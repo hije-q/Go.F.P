@@ -1,0 +1,28 @@
+
+html {
+    zoom:80%;
+    font-family: 'Gloock', serif;
+    display: flex;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+
+}
+
+.biggestcontainer {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.centercontainer {
+    position: relative;
+    right: 150px;
+}
+
+.leftcontainer {
+
+}
+
