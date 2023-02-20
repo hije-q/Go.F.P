@@ -55,7 +55,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  border: 2px solid red;
+  border: 2px solid #a61d1d;
   transition: transform 0.2s;
 }
 
