@@ -6,6 +6,7 @@
     justify-content: center;
     position: relative;
     top: 250px;
+    font-family: 'Nanum Brush Script', cursive;
   }
   
   .container {
@@ -90,10 +91,10 @@
 
 .memory2, .memory3 {
     position: relative;
-    font-size: 60px;
+    font-size: 80px;
     color: hsl(0, 0%, 90%);
     opacity: 0.9;
-    font-family: 'Labrada';
+    font-family: 'Nanum Brush Script', cursive;
     text-align: center;
     top: 290px;
     bottom: 100px;
