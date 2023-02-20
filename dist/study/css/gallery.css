@@ -53,9 +53,10 @@
       margin: 1rem;
       box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
       overflow: hidden;
-      border: hsl(0, 0%, 90%) 7px inset;
+      border: hsl(0, 0%, 90%) 4px inset;
       padding: 5px;
       font-size: 10px;
+      box-shadow: 5px 5px 5px 0px hsl(0, 0%, 90%) ;
         
   }
   

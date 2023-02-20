@@ -54,6 +54,8 @@ button {
   cursor: pointer;
   outline: inherit;
   z-index: 9;
+
+
 }
 
 .clearfix::after {

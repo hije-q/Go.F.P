@@ -15,6 +15,7 @@
     font-size: 150px;
     animation: fadein1 2s;
     -webkit-animation: fadein1 2s;
+    font-weight: 600;
     /*box-shadow  : 0px 0px 40px 5px red;*/
 }
 
@@ -106,8 +107,8 @@
   
 .firstP .write .word,
 .firstP .laser .word {
-    -webkit-animation-duration: 2.5s;
-            animation-duration: 2.5s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms);
             animation-delay: calc(0.3s + var(--word-index) * 160ms);
 
