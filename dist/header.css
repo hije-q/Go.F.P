@@ -52,7 +52,9 @@ header:not(body) {
   display: flex;
   align-items: center;
   margin-right: 10px;
+  cursor: pointer;
 }
+
 .insta-logo,
 .youtube-logo {
   width: 1vw;

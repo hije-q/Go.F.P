@@ -1,0 +1,109 @@
+.smartphone-menu {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .smartphone-menu {
+    display: block !important;
+    position: relative;
+    top: 60%;
+  }
+
+  .gallery__item,
+  #top {
+    display: none;
+  }
+
+  .gallery__text {
+    position: relative;
+    z-index: 2;
+    right: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+.fmenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.smenu {
+  width: 60%;
+  padding: 20px 40px;
+  background: none;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer !important;
+  color: white;
+  margin: 10px;
+}
+
+.smenu:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid red;
+  transition: transform 0.2s;
+}
+
+.smenu:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid white;
+  transition: transform 0.2s;
+}
+
+.smenu:after {
+  transform: translate(3px, 3px);
+}
+.smenu:before {
+  transform: translate(-3px, -3px);
+}
+.smenu:hover:after,
+.smember:hover:before {
+  transform: translate(0);
+}
+
+/*
+.smenu1 {
+    margin-right: 130px;
+}
+
+.smenu2 {
+    margin-left: 130px;
+}
+
+.smenu3 {
+    margin-right: 130px;
+}
+
+.smenu4 {
+    margin-left: 130px;
+}
+
+.smenu5 {
+    margin-right: 130px;
+}
+
+.smenu6 {
+    margin-left: 130px;
+}
+
+ */
